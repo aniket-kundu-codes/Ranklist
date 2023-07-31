@@ -49,13 +49,13 @@ app.get('/auth/google',
 
 app.get( '/auth/google/callback',
   passport.authenticate( 'google', {
-    successRedirect: 'http://localhost:4000',
-    failureRedirect: 'http://localhost:4000'
+    successRedirect: process.env.FRONTEND_URI,
+    failureRedirect: process.env.FRONTEND_URI
   })
 );
 app.get('/logout', function(req, res) {
   req.logout();
-	res.redirect('http://localhost:4000');
+	res.redirect(process.env.FRONTEND_URI);
 });
 
 
