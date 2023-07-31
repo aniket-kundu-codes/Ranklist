@@ -54,7 +54,7 @@ function NavBar(props)
                props.g_user?
                <div className="row" style={{height:'80px'}}>
                 <div className="column" style={{width:'30%'}}>
-                  <img src={props.g_user.picture} alt="User pic" style={{height:'80px',width:'80px',borderRadius:'50%'}}></img>
+                  <img src={props.g_user.picture} referrerPolicy="no-referrer" alt="User pic" style={{height:'80px',width:'80px',borderRadius:'50%'}}></img>
                 </div>
                 <div className="column" style={{width:'70%', display:'flex', flexDirection:'column', justifyContent:'flex-end'}}>
                   <p style={{fontSize:'17px', marginBottom:'0'}} >{props.g_user.name}</p>
